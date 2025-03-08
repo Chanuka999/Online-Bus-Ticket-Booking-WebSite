@@ -1,9 +1,13 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <main className="w-full bg-red-500 min-h-screen">
-        This is main section
-      </main>
+      <Router>
+        <main className="w-full flex flex-col bg-neutral-50 min-h-screen">
+          This is main section Footer
+        </main>
+      </Router>
     </>
   );
 }
