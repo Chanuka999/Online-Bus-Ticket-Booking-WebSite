@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 
 const Navbar = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   const [open, setOpen] = useState(false);
 
   const navItems = [
@@ -20,8 +22,30 @@ const Navbar = () => {
     setOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > scrollPosition && currentScroll > 50) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setScrollPosition(currentScroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
   return (
-    <nav className="w-full h-[8ch] fixed top-0 left-0 lg:px-24 md:px-16 sm:px-7 px-4 backdrop-blur-lg transition-transform duration-300 z-50">
+    <nav
+      className={`w-full h-[8ch] fixed top-0 left-0 lg:px-24 md:px-16 sm:px-7 px-4 backdrop-blur-lg transition-transform duration-300 z-50 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } ${scrollPosition > 50 ? "bg-violet-500" : "bg-neutral-100/10"}`}
+    >
       <div className="w-full h-full flex items-center justify-between">
         <Link to="/" className="text-4xl text-red-500 font-bold">
           Bus
@@ -31,7 +55,11 @@ const Navbar = () => {
           className="w-fit md:hidden flex items-center justify-center cursor-pointer flex-col gap-1 text-neutral-700"
           onClick={handleOpen}
         >
-          {open ? <FaBars /> : <FaBars />}
+          {open ? (
+            <FaBars className="w-5 h-5" />
+          ) : (
+            <FaBars className="w-5 h-5" />
+          )}
         </div>
 
         <div
@@ -39,7 +67,7 @@ const Navbar = () => {
             open
               ? "flex absolute top-20 left-0 w-full h-auto md:relative"
               : "hidden"
-          } flex-1 md:flex flex-col md:flex-row md:flex-row md:gap-14 gap-8 md:items-center items-start md:bg-transparent bg-neutral-50 md:shadow-none sm:shadow-md shadow-md rounded-xl `}
+          } flex-1 md:flex flex-col md:flex-row md:flex-row md:gap-14 gap-8 md:items-center items-start md:bg-transparent bg-neutral-50 border md:border-transparent border-neutral-200 md:shadow-none sm:shadow-md shadow-md rounded-xl `}
         >
           <ul className="list-none flex md:items-center items-start flex-wrap md:flex-row flex-col md:gap-8 gap-4 text-lg text-neutral-500 font-normal">
             {navItems.map((item, ind) => (
