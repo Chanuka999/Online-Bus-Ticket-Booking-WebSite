@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa6";
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Start as true to show navbar by default
   const [open, setOpen] = useState(false);
 
   const navItems = [
@@ -16,10 +16,6 @@ const Navbar = () => {
 
   const handleOpen = () => {
     setOpen(!open);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
   };
 
   useEffect(() => {
@@ -40,41 +36,39 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollPosition]);
+
   return (
     <nav
       className={`w-full h-[8ch] fixed top-0 left-0 lg:px-24 md:px-16 sm:px-7 px-4 backdrop-blur-lg transition-transform duration-300 z-50 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${scrollPosition > 50 ? "bg-violet-500" : "bg-neutral-100/10"}`}
+      } ${scrollPosition > 50 ? "bg-violet-200" : "bg-neutral-100/10"}`}
     >
       <div className="w-full h-full flex items-center justify-between">
         <Link to="/" className="text-4xl text-red-500 font-bold">
           Bus
         </Link>
 
+        {/* Mobile Menu Icon */}
         <div
-          className="w-fit md:hidden flex items-center justify-center cursor-pointer flex-col gap-1 text-neutral-700"
+          className="w-fit md:hidden flex items-center justify-center cursor-pointer text-neutral-700"
           onClick={handleOpen}
         >
-          {open ? (
-            <FaBars className="w-5 h-5" />
-          ) : (
-            <FaBars className="w-5 h-5" />
-          )}
+          <FaBars className="w-5 h-5" />
         </div>
 
+        {/* Navigation Links */}
         <div
-          className={` ${
-            open
-              ? "flex absolute top-20 left-0 w-full h-auto md:relative"
-              : "hidden"
-          } flex-1 md:flex flex-col md:flex-row md:flex-row md:gap-14 gap-8 md:items-center items-start md:bg-transparent bg-neutral-50 border md:border-transparent border-neutral-200 md:shadow-none sm:shadow-md shadow-md rounded-xl `}
+          className={`${
+            open ? "flex" : "hidden"
+          } md:flex absolute md:static top-20 left-0 w-full md:w-auto bg-neutral-50 md:bg-transparent border md:border-none border-neutral-200 md:shadow-none shadow-md rounded-xl md:flex-row flex-col items-center md:gap-14 gap-8 py-4 md:py-0`}
         >
-          <ul className="list-none flex md:items-center items-start flex-wrap md:flex-row flex-col md:gap-8 gap-4 text-lg text-neutral-500 font-normal">
+          <ul className="list-none flex md:flex-row flex-col md:items-center items-start gap-8 text-lg text-neutral-500 font-normal">
             {navItems.map((item, ind) => (
               <li key={ind}>
                 <Link
                   to={item.link}
                   className="hover:text-red-500 ease-in-out duration-300"
+                  onClick={() => setOpen(false)} // Close the menu on link click
                 >
                   {item.label}
                 </Link>
@@ -82,7 +76,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center mt-4 md:mt-0">
             <button className="md:w-fit w-full md:px-4 px-6 md:py-1 py-2.5 bg-red-500 border border-red-500 hover:border-red-500 md:rounded-full rounded-xl text-base font-normal text-neutral-50 hover:text-red-500 ease-in-out duration-300">
               Sign In
             </button>
