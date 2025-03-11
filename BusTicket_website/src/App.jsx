@@ -9,9 +9,11 @@ function App() {
       <Router>
         <main className="w-full flex flex-col bg-neutral-50 min-h-screen">
           <Navbar />
+
+          {/*Routing */}
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/About" element={<About />} />
+            <Route path="/" element={<About />} />
           </Routes>
         </main>
       </Router>

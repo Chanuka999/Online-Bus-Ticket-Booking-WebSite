@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa6";
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [isVisible, setIsVisible] = useState(true); // Start as true to show navbar by default
+  const [isVisible, setIsVisible] = useState(true);
   const [open, setOpen] = useState(false);
 
   const navItems = [
@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <nav
       className={`w-full h-[8ch] fixed top-0 left-0 lg:px-24 md:px-16 sm:px-7 px-4 backdrop-blur-lg transition-transform duration-300 z-50 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
+        isVisible ? "translate-y-0" : "translate-y-full"
       } ${scrollPosition > 50 ? "bg-violet-200" : "bg-neutral-100/10"}`}
     >
       <div className="w-full h-full flex items-center justify-between">
@@ -68,7 +68,7 @@ const Navbar = () => {
                 <Link
                   to={item.link}
                   className="hover:text-red-500 ease-in-out duration-300"
-                  onClick={() => setOpen(false)} // Close the menu on link click
+                  onClick={() => setOpen(false)}
                 >
                   {item.label}
                 </Link>
