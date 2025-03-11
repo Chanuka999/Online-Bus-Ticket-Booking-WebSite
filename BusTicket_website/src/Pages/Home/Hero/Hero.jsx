@@ -7,7 +7,16 @@ const Hero = () => {
     visible: { opacity: 1, y: 0 },
   };
   return (
-    <motion.div className='w-full flex-1 h-screen bg-[url("./assests/hero.png")] bg-cover bg-no-repeat bg-top relative'></motion.div>
+    <motion.div
+      className='w-full flex-1 h-screen bg-[url("./assets/herobg.png")] bg-cover bg-no-repeat bg-top relative'
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      variants={variants}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
+      <div className="absolute top-0 left-0 w-full h-full py-[9ch] bg-gradient-to-b from-neutral-50/70 via-neutral-50/15 to-neutral-50/5 flex items-center justify-start text-center flex-col gap-9"></div>
+    </motion.div>
   );
 };
 
