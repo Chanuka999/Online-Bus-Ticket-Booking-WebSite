@@ -1,4 +1,7 @@
 import React from "react";
+import { FaWifi } from "react-icons/fa";
+import { GiWaterBottle, GiCharging } from "react-icons/gi";
+import { IoTv } from "react-icons/io5";
 
 const TopSearchCard = ({ routeFrom, routeTo, timeDuration, price }) => {
   return (
@@ -26,10 +29,42 @@ const TopSearchCard = ({ routeFrom, routeTo, timeDuration, price }) => {
             </h1>
           </div>
         </div>
-        <div className="w-full flex items-center gap-3 flex-wrap"></div>
+        <div className="w-full flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-x-1">
+            <FaWifi className="w-3 h-3 text-neutral-500" />
+            <p className="text-xs text-neutral-600 font-normal">internet</p>
+          </div>
+        </div>
+        <div className="w-full flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-x-1">
+            <GiWaterBottle className="w-3 h-3 text-neutral-500" />
+            <p className="text-xs text-neutral-600 font-normal">Snaks</p>
+          </div>
+        </div>
+
+        <div className="w-full flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-x-1">
+            <IoTv className="w-3 h-3 text-neutral-500" />
+            <p className="text-xs text-neutral-600 font-normal">TV</p>
+          </div>
+        </div>
+        <div className="w-full flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-x-1">
+            <GiCharging className="w-3 h-3 text-neutral-500" />
+            <p className="text-xs text-neutral-600 font-normal">
+              Mobile Charging
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div className="w-full flex items-center justify-between"></div>
+      <div className="w-full flex items-center justify-between">
+        <h1 className="text-x1 text-neutral-700 font-semibold">Rs.{price}</h1>
+
+        <button className="w-fit px-5 py-1.5 bg-red-500 hover:bg-transparent border-2 border-primary hover:border-primary rounded-xl text-sm font-normal text-neutral-50 flex items-center justify-center gap-x-2 hover:text-primary ease-in-out duration-300">
+          ReSearve seat
+        </button>
+      </div>
     </div>
   );
 };
