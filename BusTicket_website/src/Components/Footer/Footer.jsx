@@ -8,6 +8,10 @@ import {
   FaFacebookF,
 } from "react-icons/fa6";
 
+import MasterCardImg from "../../assets/mastercard.png";
+import PaypalImg from "../../assets/paypal.png";
+import CreditCardImg from "../../assets/creditcard.png";
+
 const Footer = () => {
   return (
     <div className="w-full h-auto bg-neutral-950 py-6 px-8">
@@ -149,6 +153,34 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full h-px bg-neutral-800/50" />
+        <div className="w-full flex items-center justify-between">
+          <p className="text-sm text-neutral-600 font-normal">
+            copyright &copy:2024.All rights reserved.
+          </p>
+          <div className="flex items-center gap-x-2">
+            <div className="">
+              <img
+                src={MasterCardImg}
+                alt=""
+                className="w-fit h-9 object-control"
+              />
+            </div>
+            <div className="">
+              <img
+                src={PaypalImg}
+                alt=""
+                className="w-fit h-9 object-control"
+              />
+            </div>
+            <div className="">
+              <img
+                src={CreditCardImg}
+                alt=""
+                className="w-fit h-9 object-control"
+              />
+            </div>
+          </div>
+        </div>
       </RootLayout>
     </div>
   );
