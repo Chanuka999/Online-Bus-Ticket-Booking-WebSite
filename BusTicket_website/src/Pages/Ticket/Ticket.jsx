@@ -4,6 +4,7 @@ import RootLayout from "../../Components/Layout/RootLayout";
 import { motion } from "framer-motion";
 import Search from "../Home/Hero/Search/Search";
 import Filter from "./Filter/Filter";
+import SearchResalt from "./SearchResalt/SearchResalt";
 
 const Ticket = () => {
   return (
@@ -34,6 +35,7 @@ const Ticket = () => {
           <div className="col-span-1">
             <Filter className="space-y-4 sticky top-52" />
           </div>
+          <SearchResalt />
         </div>
       </RootLayout>
     </div>
