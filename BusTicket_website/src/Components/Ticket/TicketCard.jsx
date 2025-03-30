@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBus } from "react-icons/fa";
+import { TbAirConditioning } from "react-icons/tb";
 
 const TicketCard = (
   icon: Icon,
@@ -14,10 +15,25 @@ const TicketCard = (
     <div className="w-full rounded-xl p-5 border-2 border-neutral-300 space-y-4">
       <div className="space-y-5 w-full border-b border-neutral-300/60 pb-4">
         <div className="space-y-0">
-          <div className="w-ful flex items-center">
-            <div className="flex items-center gap-x-2">
-              <FaBus />
-              <p className="text-lg text-neutral-700 font-semibold"></p>
+          <div className="w-ful flex items-center justify-x-2">
+            <FaBus className="text-lg text-neutral-700 font-semibold" />
+            <p className="text-lg text-neutral-700 font-semibold">{busName}</p>
+          </div>
+
+          <div className="w-ful flex items-center justify-x-4">
+            <div className="flex items-center gap-x-1 bg-neutral-200/65 w-fit rounded-full px-1.5 py-0">
+              <TbAirConditioning className="w-4 h-4 text-primary" />
+              <p className="text-xs text-neutral-600 font-normal">AC</p>
+            </div>
+
+            <div className="flex items-center gap-x-1 bg-neutral-200/65 w-fit rounded-full px-1.5 py-0">
+              <FaStar className="w-4 h-4 text-yellow-600" />
+              <p className="text-xs text-yellow-600 font-normal">4.5</p>
+            </div>
+
+            <div className="flex items-center gap-x-1 bg-neutral-200/65 w-fit rounded-full px-1.5 py-0">
+              <RiVipFill className="w-4 h-4 text-yellow-600" />
+              <p className="text-xs text-yellow-600 font-normal">sofa</p>
             </div>
           </div>
 
