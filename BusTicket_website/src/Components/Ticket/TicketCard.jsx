@@ -14,11 +14,12 @@ const TicketCard = ({
   departureTime,
   price,
   timeDuration,
+  availableSeats,
 }) => {
   return (
     <div className="w-full rounded-xl p-5 border-2 border-neutral-300 space-y-4">
-      <div className="space-y-5 w-full border-b border-neutral-300/60 pb-4">
-        <div className="space-y-0">
+      <div className="space-y-7 w-full border-b border-neutral-300/60 pb-5">
+        <div className="space-y-5">
           <div className="w-full flex items-center gap-x-2">
             <FaBus className="text-lg text-neutral-700 font-semibold" />
             <p className="text-lg text-neutral-700 font-semibold">{busName}</p>
@@ -109,9 +110,16 @@ const TicketCard = ({
       <div className="w-full flex items-center justify-between">
         <h1 className="text-xl text-neutral-700 font-semibold">Rs. {price}</h1>
 
-        <button className="w-fit px-5 py-1.5 bg-red-500 hover:bg-transparent border-2 border-red-500 hover:border-red-500 rounded-xl text-sm font-normal text-white flex items-center justify-center gap-x-2 hover:text-red-500 ease-in-out duration-300">
+        <h1 className="text-sm text-neutral-600 font-normal flex items-center justify-center gap-x-1.5">
+          <span className="text-lg text-green-700 font-bold pt-0.5">
+            {availableSeats}
+          </span>
+          seats available
+        </h1>
+
+        <div className="w-fit px-5 py-1.5 bg-red-500 hover:bg-transparent border-2 border-red-500 hover:border-red-500 rounded-xl text-sm font-normal text-white flex items-center justify-center gap-x-2 hover:text-red-500 ease-in-out duration-300">
           Reserve Seat
-        </button>
+        </div>
       </div>
     </div>
   );
