@@ -5,6 +5,7 @@ import { RiVipFill } from "react-icons/ri";
 import { MdOutlineChair } from "react-icons/md";
 import { GiWaterBottle, GiCharging } from "react-icons/gi";
 import { IoTv } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const TicketCard = ({
   busName,
@@ -117,9 +118,12 @@ const TicketCard = ({
           seats available
         </h1>
 
-        <div className="w-fit px-5 py-1.5 bg-red-500 hover:bg-transparent border-2 border-red-500 hover:border-red-500 rounded-xl text-sm font-normal text-white flex items-center justify-center gap-x-2 hover:text-red-500 ease-in-out duration-300">
+        <Link
+          to="/bus-tickets/detail"
+          className="w-fit px-5 py-1.5 bg-red-500 hover:bg-transparent border-2 border-red-500 hover:border-red-500 rounded-xl text-sm font-normal text-white flex items-center justify-center gap-x-2 hover:text-red-500 ease-in-out duration-300"
+        >
           Reserve Seat
-        </div>
+        </Link>
       </div>
     </div>
   );
