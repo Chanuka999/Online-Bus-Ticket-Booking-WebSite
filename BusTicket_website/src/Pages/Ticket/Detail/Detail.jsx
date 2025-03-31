@@ -1,11 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import WarningAlert from "../../../Components/AlertMessage.jsx/WarningAlert";
+import TopLayout from "../../../Components/Layout/Toppage/TopLayout";
+import RootLayout from "../../../Components/Layout/RootLayout";
 
 const Detail = () => {
-  <>
-    One individual only can book 10 sears.If you want to book for than Please
-    <Link>Contact our support</Link>
-  </>;
+  const message = (
+    <>
+      One individual only can book 10 sears.If you want to book for than Please
+      <Link to={"/support-team"} className="text-yellow-700 font-medium">
+        Contact our support team.
+      </Link>
+    </>
+  );
+
   return (
     <div className="w-full space-y-12 pb-16">
       <TopLayout
@@ -17,9 +25,9 @@ const Detail = () => {
 
       <RootLayout className="space y-12 w-full pb-16">
         <div className="w-full space-y-8">
-          .w-full.flex.items-center{" "}
-          <justify-center className="flex-col hap-8 text-center"></justify-center>
+          <WarningAlert message={message} />
         </div>
+        <div className="w-full flex items-center justify-center flex-col gap-8 text-center"></div>
       </RootLayout>
     </div>
   );
