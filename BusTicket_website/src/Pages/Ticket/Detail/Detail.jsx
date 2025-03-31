@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import WarningAlert from "../../../Components/AlertMessage.jsx/WarningAlert";
 import TopLayout from "../../../Components/Layout/Toppage/TopLayout";
 import RootLayout from "../../../Components/Layout/RootLayout";
+import BusSeat from "./Seat/Busseat/BusSeat";
 
 const Detail = () => {
   const message = (
@@ -26,6 +27,8 @@ const Detail = () => {
       <RootLayout className="space y-12 w-full pb-16">
         <div className="w-full space-y-8">
           <WarningAlert message={message} />
+
+          <BusSeat />
         </div>
         <div className="w-full flex items-center justify-center flex-col gap-8 text-center"></div>
       </RootLayout>
