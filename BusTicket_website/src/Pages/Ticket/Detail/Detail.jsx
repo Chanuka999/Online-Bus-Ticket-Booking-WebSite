@@ -6,6 +6,7 @@ import RootLayout from "../../../Components/Layout/RootLayout";
 import BusSeat from "./Seat/Busseat/BusSeat";
 import ToggleBtn from "../../../Components/ToggleBtn/ToggleBtn";
 import Amentities from "./Amentities/Amentities";
+import ReservationPolicy from "./ReservationPolicy/ReservationPolicy";
 
 const Detail = () => {
   const message = (
@@ -52,6 +53,8 @@ const Detail = () => {
               <div className="w-full space-y-10">
                 <div className="w-full grid grid-cols-7">
                   <Amentities />
+
+                  <ReservationPolicy />
                 </div>
               </div>
             </ToggleBtn>
