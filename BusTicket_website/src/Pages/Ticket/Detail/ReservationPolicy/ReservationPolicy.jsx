@@ -17,8 +17,17 @@ const ReservationPolicy = () => {
             otherwise,they will need to purchase a new one
           </li>
           <li className="text-sm text-neutral-500 font-normal">
+            Tickets can be cancelled,reschedulled,or delayed due to natural
+            disasters or other unforeseen circumstances.
+          </li>
+          <li className="text-sm text-neutral-500 font-normal">
             Bus services may be cancelled,rescheduled,or delayed due to natural
-            disasters or other unforeson
+            disasters or other unforeson circumstances.
+          </li>
+          <li className="text-sm text-neutral-500 font-normal">
+            passengers must arrive the bording point 30 minutes before the
+            departure time.the company is not responsible for missed busses due
+            to late arrives.
           </li>
         </ul>
       </div>
