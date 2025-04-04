@@ -1,5 +1,7 @@
 import React from "react";
 import PassengerData from "./PassengerData/PassengerData";
+import TopLayout from "../../../Components/Layout/Toppage/TopLayout";
+import RootLayout from "../../../Components/Layout/RootLayout";
 
 const CheckOut = () => {
   return (
