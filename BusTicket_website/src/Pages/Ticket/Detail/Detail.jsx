@@ -7,6 +7,7 @@ import BusSeat from "./Seat/Busseat/BusSeat";
 import ToggleBtn from "../../../Components/ToggleBtn/ToggleBtn";
 import Amentities from "./Amentities/Amentities";
 import ReservationPolicy from "./ReservationPolicy/ReservationPolicy";
+import BusImage from "./BusImage/BusImage";
 
 const Detail = () => {
   const message = (
@@ -56,6 +57,7 @@ const Detail = () => {
 
                   <ReservationPolicy />
                 </div>
+                <BusImage />
               </div>
             </ToggleBtn>
           </div>
