@@ -12,6 +12,14 @@ const ReservationPolicy = () => {
           <li className="text-sm text-neutral-500 font-normal">
             Please note that this ticket is non-refundable
           </li>
+          <li className="text-sm text-neutral-500 font-normal">
+            Pasengers must keep their tickets until the journey ends;
+            otherwise,they will need to purchase a new one
+          </li>
+          <li className="text-sm text-neutral-500 font-normal">
+            Bus services may be cancelled,rescheduled,or delayed due to natural
+            disasters or other unforeson
+          </li>
         </ul>
       </div>
     </div>
