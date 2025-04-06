@@ -2,6 +2,9 @@ import React, { useRef } from "react";
 import TopLayout from "../../../Components/Layout/Toppage/TopLayout";
 import RootLayout from "../../../Components/Layout/RootLayout";
 import PassengerInvoice from "./PassengerInvoice/PassengerInvoice";
+import CompanyInvoice from "./Company/CompanyInvoice";
+import { toPng } from "html-to-image";
+import download from "downloadjs";
 
 const Invoice = () => {
   const invoiceRef = useRef(null);
@@ -10,7 +13,7 @@ const Invoice = () => {
     if (invoiceRef.current === null) return;
 
     try {
-      const detaUrl = await toPng(invoiceRef.current);
+      const dataUrl = await toPng(invoiceRef.current);
 
       download(dataUrl, "g-tech-invoice-report.png");
     } catch (error) {
@@ -33,13 +36,20 @@ const Invoice = () => {
             className="w-[90%] grid grid-cols-5 bg-white rounded-3xl border-neutral-200 shadow-sm relative"
           >
             <PassengerInvoice />
+
+            <CompanyInvoice />
             <div className="absolute -top-3 right-[18.8%] h-6 w-6 rounded-full bg-neutral-50 border border-neutral-50" />
 
-            <div className="absolute -top-3 right-[18.8%] h-6 w-6 rounded-full bg-neutral-50 border border-neutral-50" />
+            <div className="absolute -bottom-3 right-[18.8%] h-6 w-6 rounded-full bg-neutral-50 border border-neutral-50" />
           </div>
         </div>
         <div className="w-full flex justify-center items-center">
-          Download Button
+          <button
+            onClick={handleDownload}
+            className="w-fit px-8 bg-red-600 text-neutral-50 h-14 font-bold text-lg rounded-lg"
+          >
+            Download Invoice
+          </button>
         </div>
       </RootLayout>
     </div>
