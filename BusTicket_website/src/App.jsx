@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import Ticket from "./Pages/Ticket/Ticket";
 import Detail from "./Pages/Ticket/Detail/Detail";
 import CheckOut from "./Pages/Ticket/CheckOut/CheckOut";
+import Invoice from "./Pages/Ticket/Invoice/Invoice";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/bus-tickets" element={<Ticket />} />
             <Route path="/bus-tickets/Checkout" element={<CheckOut />} />
             <Route path="/bus-tickets/detail" element={<Detail />}></Route>
+            <Route path="/bus-tickets/Payment" element={<Invoice />}></Route>
           </Routes>
           <Footer />
         </main>
