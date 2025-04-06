@@ -9,8 +9,8 @@ const SearchResalt = () => {
       <div className="space-y-6">
         <TicketCard
           icon={FaBus}
-          busName={"Sworgadwari Deluxe"}
-          routeFrome={"Kathmandu"}
+          busName={"Laxapana Express"}
+          routeFrome={"laxpana"}
           routeTo={"laxapana"}
           arrivalTime={"6.15 pm"}
           departureTime={"10.00"}
@@ -20,8 +20,8 @@ const SearchResalt = () => {
 
         <TicketCard
           icon={FaBus}
-          busName={"Sworgadwari Deluxe"}
-          routeFrome={"Kathmandu"}
+          busName={"Laxapana Express"}
+          routeFrome={"laxpana"}
           routeTo={"laxapana"}
           arrivalTime={"6.15 pm"}
           departureTime={"10.00"}
@@ -30,8 +30,8 @@ const SearchResalt = () => {
         />
         <TicketCard
           icon={FaBus}
-          busName={"Sworgadwari Deluxe"}
-          routeFrome={"Kathmandu"}
+          busName={"Laxapana Express"}
+          routeFrome={"laxpana"}
           routeTo={"laxapana"}
           arrivalTime={"6.15 pm"}
           departureTime={"10.00"}
@@ -40,8 +40,8 @@ const SearchResalt = () => {
         />
         <TicketCard
           icon={FaBus}
-          busName={"Sworgadwari Deluxe"}
-          routeFrome={"Kathmandu"}
+          busName={"Laxapana Express"}
+          routeFrome={"laxpana"}
           routeTo={"laxapana"}
           arrivalTime={"6.15 pm"}
           departureTime={"10.00"}
@@ -51,8 +51,8 @@ const SearchResalt = () => {
 
         <TicketCard
           icon={FaBus}
-          busName={"Sworgadwari Deluxe"}
-          routeFrome={"Kathmandu"}
+          busName={"Laxapana Express"}
+          routeFrome={"laxpana"}
           routeTo={"laxapana"}
           arrivalTime={"6.15 pm"}
           departureTime={"10.00"}
@@ -61,8 +61,8 @@ const SearchResalt = () => {
         />
         <TicketCard
           icon={FaBus}
-          busName={"Sworgadwari Deluxe"}
-          routeFrome={"Kathmandu"}
+          busName={"Laxapana Express"}
+          routeFrome={"laxpana"}
           routeTo={"laxapana"}
           arrivalTime={"6.15 pm"}
           departureTime={"10.00"}
