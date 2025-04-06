@@ -97,7 +97,7 @@ const Filter = ({ className }) => {
                 htmlFor="sworgadwarideluxe"
                 className="text-sm text-neutral-600 font-normal cursor-pointer"
               >
-                sworgadwari deluxe
+                Laxapana Express
                 <span className="text-xs text-neutral-600">(10)</span>
               </label>
             </div>
@@ -112,7 +112,7 @@ const Filter = ({ className }) => {
                 htmlFor="pokkharadeluxe"
                 className="text-sm text-neutral-600 font-normal cursor-pointer"
               >
-                pokhara delux
+                jagath Express
                 <span className="text-xs text-neutral-600">(10)</span>
               </label>
             </div>
@@ -127,7 +127,7 @@ const Filter = ({ className }) => {
                 htmlFor="mustangdelux"
                 className="text-sm text-neutral-600 font-normal cursor-pointer"
               >
-                Mustang Delux
+                Chanuka Express
                 <span className="text-xs text-neutral-600">(10)</span>
               </label>
             </div>
@@ -142,7 +142,7 @@ const Filter = ({ className }) => {
                 htmlFor="lumbinidelux"
                 className="text-sm text-neutral-600 font-normal cursor-pointer"
               >
-                lumbini Delux
+                Maya
                 <span className="text-xs text-neutral-600">(10)</span>
               </label>
             </div>
