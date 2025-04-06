@@ -16,7 +16,7 @@ const PassengerInvoice = () => {
             className="w-auto h-12 object-cover object-center"
           />
           <h1 className="text-xl text-neutral-50 font-bold uppercase tracking-wider pt-1">
-            sworgadwari Deluxe
+            Laxapana Express
           </h1>
         </div>
 
