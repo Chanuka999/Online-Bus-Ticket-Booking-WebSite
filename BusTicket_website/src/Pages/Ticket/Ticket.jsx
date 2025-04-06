@@ -1,7 +1,7 @@
 import React from "react";
 import TopLayout from "../../Components/Layout/Toppage/TopLayout";
 import RootLayout from "../../Components/Layout/RootLayout";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import Search from "../Home/Hero/Search/Search";
 import Filter from "./Filter/Filter";
 import SearchResalt from "./SearchResalt/SearchResalt";
