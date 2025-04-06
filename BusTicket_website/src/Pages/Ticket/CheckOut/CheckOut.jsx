@@ -2,6 +2,7 @@ import React from "react";
 import PassengerData from "./PassengerData/PassengerData";
 import TopLayout from "../../../Components/Layout/Toppage/TopLayout";
 import RootLayout from "../../../Components/Layout/RootLayout";
+import BookingStatus from "./BookingStatus/BookingStatus";
 
 const CheckOut = () => {
   return (
@@ -16,6 +17,8 @@ const CheckOut = () => {
       <RootLayout className="space y-12 w-full pb-16">
         <div className="w-full grid grid-cols-7 items-start gap-44 relative">
           <PassengerData />
+
+          <BookingStatus />
         </div>
       </RootLayout>
     </div>
