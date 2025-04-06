@@ -59,7 +59,7 @@ const BusSeat = () => {
 
             <div className="w-full flex items-stretch gap-x-1.5">
               <div className="w-10 h-fit">
-                <GiSteeringWheel className="text-3xl mt-7 text-primary -rotate-90" />
+                <GiSteeringWheel className="text-3xl mt-7 text-red-500 -rotate-90" />
               </div>
 
               <div className="flex flex-col items-center border-1-2 border-dashed border-neutral-300 pl-7">
