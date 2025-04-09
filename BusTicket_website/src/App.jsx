@@ -7,6 +7,7 @@ import Ticket from "./Pages/Ticket/Ticket";
 import Detail from "./Pages/Ticket/Detail/Detail";
 import CheckOut from "./Pages/Ticket/CheckOut/CheckOut";
 import Invoice from "./Pages/Ticket/Invoice/Invoice";
+import Services from "./Pages/Home/Services/Services";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/bus-tickets" element={<Ticket />} />
             <Route path="/bus-tickets/Checkout" element={<CheckOut />} />
             <Route path="/bus-tickets/detail" element={<Detail />}></Route>
